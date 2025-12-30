@@ -4,16 +4,13 @@ readings = [12.5, "Error", 18.2, 15.0, "Error", 22.1, 10.8]
 for i in range(len(readings)):
     if readings[i] == "Error":
         readings[i] = 0.0
-print(f"After Cleaning: {readings}")
+print(f"After Cleaning(Replacing ): {readings}")
 # --- Task 2: The Multiplier  (In-place Modification)---
 for i in range(len(readings)):
     readings[i] = readings[i] * 1.1
 print(f"After Multiplication: {readings}")
 # --- Task 3: The Filter (Selective Removal) & Extra Challenge  ---
 low_quality_log = []
-
-# When removing items while looping, it is safest to loop backwards.
-# If you loop forwards and delete an item, the index shifts and you might skip the next item!
 for i in range(len(readings) - 1, -1, -1):
     if readings[i] < 15.0:
         low_quality_log.append(readings[i])
