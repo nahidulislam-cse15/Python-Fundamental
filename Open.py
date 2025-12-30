@@ -28,7 +28,7 @@ def input_scores(name,credit):
 
 if dept == "CSE":
    
-    for i in range(2):
+    for i in range(50):
         credit = float(input(f"Enter Subject {i+1} Credit: "))
         gp+=input_scores(f"Subject {i+1}",credit)
         total_credits+=credit
