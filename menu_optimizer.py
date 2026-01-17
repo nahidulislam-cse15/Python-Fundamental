@@ -14,6 +14,3 @@ for key in list(menu.keys()):
         menu.pop(key)
 
 print(menu)
-a="aaa"
-a="vvv"
-print(a)
